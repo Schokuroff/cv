@@ -1,0 +1,169 @@
+%-------------------------
+% Resume in Latex
+% Author : Nikita Shokurov
+% Website: 
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{}{\Large Nikita Shokurov 1996-10-23}} & Email :
+  \href{mailto:shokurovn@gmail.com}{shokurovn@gmail.com}\\
+  \href{}{} & Mobile : +7 999 679 23 10 \\ & Telegram : traveller747
+
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Gubkin Russian State University of Oil and Gas (National Research University)}{Moscow}
+      {Computer Science - master}{2018 -- 2020}
+    \resumeSubheading
+      {Gubkin Russian State University of Oil and Gas (National Research University)}{Moscow}
+      {Computer Science - bachelor}{2014 -- 2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {OZON Tech}{Moscow}
+      {Data Engineer}{Nov 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Responsibilities}
+          {ETL development for marketing department;
+          Collaborating with cross-functional teams to optimize pipelines, ensuring they are scalable, efficient, and fault-tolerant;
+          development of chatbots for reporting (something like a dashboard in a chat);
+           Support and development of microservices;
+           Automation of ab testing;
+           Development of models for forecasting: traffic, client metrics;
+           Code review by colleagues;
+           Recruitment and development of interns and junior employees}
+        \resumeItem{Results}
+           {It turned out well to automate most processes in marketing:
+            the number of ad-hocs has been greatly reduced, managers are increasingly working directly with dashboards and microservices;
+           }
+        \resumeItem{Stack}
+          {Python, SQL(clickhouse, vertica, pg), PySpark, HDFS, Airflow, Git, Redash, sklearn, Flask, Docker}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {VTB Capital}{Moscow}
+      {Data Engineer}{Sep 2020 - Sep 2021}
+      \resumeItemListStart
+        \resumeItem{Responsibilities}
+          {Development of data marts for Coverage department;
+           Extracting information from texts, pictures (poorly readable pdf);
+           Forecasting microeconomic indicators of companies
+          }
+        \resumeItem{Stack}
+          {Python, SQL, PySpark, Tesseract, sklearn, BeautifulSoup
+          }
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Societe Generale}{Moscow}
+      {junior Data Scientist}{May 2019 - Sep 2020}
+      \resumeItemListStart
+        \resumeItem{Responsibilities}
+          {Development of ETL for the customer analytics department;
+           Development of models for scoring clients for marketing activity, NPS;
+           ab testing;
+           Transferring models from the old stack to the new one: SAS -> Python
+          }
+        \resumeItem{Stack}
+          {Python, SAS, SQL, PySpark, Oracle, Airflow}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Philip Morris International}{Moscow}
+      {Data Analyst}{Jul 2018 - May 2019}
+      \resumeItemListStart
+        \resumeItem{Responsibilities}
+          {Forecasting sales and stock of IQOS
+          }
+        \resumeItem{Stack}
+          {VBA, Excel, SQL}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
