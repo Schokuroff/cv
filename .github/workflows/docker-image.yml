@@ -4,12 +4,19 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - 'etl/**'
+      - 'dwh/**'  
+
 jobs:
-  docker:
+  etl:
+    if: contains(github.event.head_commit.message, 'etl/')
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Set up QEMU
+      - name: Run etl job
+        run: echo "Running etl job"
+            
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       -
         name: Set up Docker Buildx
@@ -26,3 +33,11 @@ jobs:
         with:
           push: true
           tags: traveler747/invest_helper_bot:tagname
+  dwh:
+    if: contains(github.event.head_commit.message, 'dwh/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run dwh job
+        run: echo "Running dwh job"
+
+
