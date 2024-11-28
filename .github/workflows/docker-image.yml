@@ -36,7 +36,7 @@ jobs:
         run: echo "Changed folders ${{ steps.get_changed.outputs.changed }}"
 
   etl:
-    needs: get-changed-files
+    needs: get-changed-folders
     if: contains(needs.get-changed-files.outputs.changed_folders, 'etl')
     runs-on: ubuntu-latest
     steps:
