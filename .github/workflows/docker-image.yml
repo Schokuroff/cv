@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run start job
-        run: echo github.event.head_commit.message
+        run: echo "${{ github.event.head_commit.message }}"
 
 
   etl:
