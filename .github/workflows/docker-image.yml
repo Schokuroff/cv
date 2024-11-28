@@ -37,7 +37,7 @@ jobs:
 
   etl:
     needs: get-changed-folders
-    if: contains(needs.get-changed-files.outputs.changed_folders, 'etl')
+    if: contains(needs.get-changed-folders.outputs.changed_folders, 'etl')
     runs-on: ubuntu-latest
     steps:
       - name: Run etl job
