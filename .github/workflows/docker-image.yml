@@ -15,6 +15,22 @@ jobs:
       - name: Run start job
         run: echo "${{ github.event.head_commit.message }}"
 
+  get-folders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get changed folders
+        id: get_changed
+        uses: Stockopedia/action-get-changed-files@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          foldersOnly: true
+          format: json
+
+      - name: Print changed folders
+        run: echo "Changed folders ${{ steps.get_changed.outputs.changed }}"
 
   etl:
     if: contains(github.event.head_commit.message, 'etl/')
